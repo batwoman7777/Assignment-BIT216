@@ -1,0 +1,235 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+.body{
+    background-color: #d5d1e2;
+    position: relative;
+    height: 100vh;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 100px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: url(helping-hand.jpg);
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: auto;
+        opacity: 0.4;
+        z-index: -1;
+    }
+    .navbar{
+        background: #c20505;
+        .navbar-brand{
+            .img{
+                width: 135px;
+                height: 85px;
+            }
+        }
+        .navigation{
+            min-height: 70px;
+           .item{
+               .link{
+                font-weight: 600;
+                text-decoration: none;
+                color: #fff;
+                transition: 300ms ease-in-out;
+                &:hover{
+                    text-decoration: underline;
+                    color: #bbb;
+                    background-color: #db2525;
+
+                }
+               }     
+           }
+            
+        }
+        .hamburger-menu{
+            cursor: pointer;
+
+            .bar{
+                display: block;
+                width: 25px;
+                height: 3px;
+                margin: 5px auto;
+                transition: all 300ms ease-in-out;
+                background-color: #fff;
+            }
+        }
+    }
+    .hero-text{
+        color: #494848;
+        .h1{
+            font-size: clamp(2rem, 6vw, 14rem);
+            font-weight: 500;
+        }
+        .p{
+            font-size: clamp(1rem, 3.8vw, 2.5rem);
+            font-style: italic;
+            font-weight: 500;
+        }
+        .hero-row{
+            .hero-col{
+                background-image: linear-gradient(to right, rgba(119, 115, 115, 0.5), rgba(201, 191, 191, 0.5));
+                transition: 500ms ease-in-out;
+
+                &:hover{
+                    background-image: linear-gradient(to right, rgba(48, 43, 43, 0.5), rgba(182, 170, 170, 0.5));
+                    cursor: pointer;
+                }
+                .a{
+                    display: inline-block;
+                    font-family: Barlow, sans-serif;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    font-size: 150%;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    color: #ffd;
+
+                    .fa-hand-holding-heart{
+                        color: #e05a70;
+                        margin-right: 10px;
+                        font-size: 120%;
+                        vertical-align: middle;
+                    }
+                    .fa-flag{
+                        margin-right: 10px;
+                        font-size: 120%;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+        .verification{
+            .header{
+                .h2{
+                    max-width: 800px;
+                    color: #111010;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    font-size: clamp(1.8rem, 3.8vw, 8rem);
+                }
+            }
+            .ver-col{
+                font-size: clamp(12px, 2vw, 21px);
+                background-image: linear-gradient(to right, grey, rgb(2, 2, 68));
+                border: 1px solid #8d8a8a;
+                border-radius: 20px;
+                transition: 300ms ease-in-out;
+                &:hover{
+                    background-image: linear-gradient(to right, rgb(141, 138, 138), rgb(3, 3, 121));  
+                }
+                .a{
+                    display: inline-block;
+                    text-decoration: none;
+                    color: #d6cdcd;
+                    font-size: clamp(0.8rem, 1.8vw, 4rem);
+                    transition: 300ms ease-in-out;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .footer{
+        background: #fff;
+        color:#302b2b;
+
+        .logo{
+            font-weight:600;
+        }
+        .ul{
+            .li{
+                .a{
+                    color: #111;
+                    text-decoration: none;
+                    transition: 200ms ease-in-out;
+                    
+                    &:hover{
+                        color: #555;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .btn-floating{
+            color:#302b2b;
+            transition: 300ms ease-in-out;
+
+            &:hover{
+                color: #494646;
+            }
+            .fa-brands{
+                font-size: 150%;
+            }
+        }
+    }
+    .copyright{
+        background: #c0c0c0;
+        font-style: italic;
+    }
+    .successful-box{
+        background: url(bg.jpeg);
+        background-repeat: no-repeat;
+        
+        .a{
+            color: dodgerblue;
+            display: inline-block !important;
+            font-size: 150%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .hamburger-menu{
+        display: block;
+    }
+    .active{
+        .bar:nth-child(2){
+            opacity: 0;
+        }
+        .bar:nth-child(1){
+            transform: translateY(8px) rotate(45deg);
+        }
+        .bar:nth-child(3){
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    }
+
+    .navigation{
+        position: fixed;
+        left: -100%;
+        top: 110px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #c20505;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #ddd;
+        transition: 300ms;
+
+        .item{
+            width: 100%;
+            .link{
+                padding: 2rem;
+            }
+        }
+
+    }
+    .active{
+        left: 0;
+    }
+}
+@media screen and (min-width: 768px){
+    .hamburger-menu{
+        display: none;
+    }
+}
