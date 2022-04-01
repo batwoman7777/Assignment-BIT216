@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.popup {
+  background: url(bg.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.popup .popup-option {
+  font-size: clamp(25px, 3vw, 45px);
+  background-image: url(banner-black.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #ddd;
+}
+
+.popup .popup-option .popup-link {
+  color: #fff;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  border: 1px solid #ddd;
+}
+
+.popup .popup-option .popup-link:hover {
+  background-color: rgba(136, 130, 130, 0.3);
+}
+/*# sourceMappingURL=popup.css.map */
